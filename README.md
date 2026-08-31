@@ -2,7 +2,7 @@
 
 [English](README.md) · [简体中文](README.zh-Hans.md) · [繁體中文](README.zh-Hant.md)
 
-[![HostBox on the App Store](https://img.shields.io/itunes/v/6798103086?label=App%20Store&color=0a84ff)](https://apps.apple.com/us/app/hostbox/id6798103086)
+[![HostBox on the App Store](https://img.shields.io/itunes/v/6798103086?label=App%20Store&color=0a84ff)](https://apps.apple.com/app/id6798103086)
 [![Documentation safety](https://github.com/MatchHar/HostBox-App/actions/workflows/docs.yml/badge.svg)](https://github.com/MatchHar/HostBox-App/actions/workflows/docs.yml)
 
 HostBox is an iPhone deployment and maintenance tool for a self-hosted My T
@@ -10,7 +10,7 @@ Server. It connects directly to a VPS selected by the user, guides installation
 of TeslaMate, TeslaMateAPI, and optional My T Companion, verifies service
 health, and hands one tested connection entry to My T.
 
-**[Download HostBox](https://apps.apple.com/us/app/hostbox/id6798103086)** ·
+**[Download HostBox](https://apps.apple.com/app/id6798103086)** ·
 [Official product page and video](https://my-tesla.app/hostbox/en/) ·
 [Privacy policy](https://my-tesla.app/hostbox/privacy/en/) ·
 [Support](https://my-tesla.app/support/en/)

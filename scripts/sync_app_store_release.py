@@ -30,9 +30,9 @@ def main() -> None:
         "app_id": APP_ID,
         "track_name": app.get("trackName", "HostBox"),
         "version": str(app["version"]),
-        "track_view_url": app.get(
-            "trackViewUrl", f"https://apps.apple.com/us/app/hostbox/id{APP_ID}"
-        ),
+        # Keep the public link storefront-neutral. Apple resolves this ID-only URL
+        # to the visitor's active App Store storefront.
+        "track_view_url": f"https://apps.apple.com/app/id{APP_ID}",
         "source": LOOKUP_URL,
         "checked_at": dt.datetime.now(dt.timezone.utc)
         .replace(microsecond=0)

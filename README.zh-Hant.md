@@ -2,14 +2,14 @@
 
 [English](README.md) · [简体中文](README.zh-Hans.md) · [繁體中文](README.zh-Hant.md)
 
-[![HostBox App Store 版本](https://img.shields.io/itunes/v/6798103086?label=App%20Store&color=0a84ff)](https://apps.apple.com/us/app/hostbox/id6798103086)
+[![HostBox App Store 版本](https://img.shields.io/itunes/v/6798103086?label=App%20Store&color=0a84ff)](https://apps.apple.com/app/id6798103086)
 [![文件安全檢查](https://github.com/MatchHar/HostBox-App/actions/workflows/docs.yml/badge.svg)](https://github.com/MatchHar/HostBox-App/actions/workflows/docs.yml)
 
 HostBox 是在 iPhone 上部署和維護自託管 My T Server 的工具。它直接連接
 使用者選擇的 VPS，引導安裝 TeslaMate、TeslaMateAPI 和選用的 My T
 Companion，驗證服務健康狀態，再把一個已測試的連線入口交給 My T。
 
-**[下載 HostBox](https://apps.apple.com/us/app/hostbox/id6798103086)** ·
+**[下載 HostBox](https://apps.apple.com/app/id6798103086)** ·
 [官方介紹與影片](https://my-tesla.app/hostbox/zh-hant/) ·
 [隱私權政策](https://my-tesla.app/hostbox/privacy/zh-hant/) ·
 [支援](https://my-tesla.app/support/zh-hant/)
