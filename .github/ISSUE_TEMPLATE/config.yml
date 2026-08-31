@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private security report
+    url: https://github.com/MatchHar/HostBox-App/security/advisories/new
+    about: Report a suspected vulnerability privately.
+  - name: Official HostBox support
+    url: https://my-tesla.app/support/en/
+    about: App Store, privacy, and account-independent product support.

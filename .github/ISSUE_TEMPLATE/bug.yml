@@ -1,0 +1,46 @@
+name: HostBox product or documentation issue
+description: Report a reproducible problem without exposing private server or vehicle data.
+title: "[Issue] "
+labels:
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Remove passwords, tokens, keys, SSH fingerprints, hostnames/IPs, `.env`, Compose files, database exports, VINs, locations, and raw logs. Use private vulnerability reporting for security issues.
+  - type: input
+    id: hostbox-version
+    attributes:
+      label: HostBox version and build
+      placeholder: "Example: version shown in Settings (do not attach credentials)"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Device and server environment
+      placeholder: iOS version, device model, server OS, access mode
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: Describe the first failed step and a redacted error summary.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed all credentials, server identifiers, vehicle data, deployment files, and raw logs.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true

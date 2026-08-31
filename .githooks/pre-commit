@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+scripts/verify-public-boundary.sh
+scripts/verify-documentation-parity.sh
+scripts/verify-links.sh

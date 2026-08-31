@@ -1,0 +1,55 @@
+name: Sync public App Store version
+
+on:
+  schedule:
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: app-store-version-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Read Apple's public listing
+        run: python3 scripts/sync_app_store_release.py
+      - name: Open a version-sync pull request when Apple changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- docs/app-store-release.json; then
+            echo "Apple public version is unchanged."
+            exit 0
+          fi
+          public_version="$(python3 -c 'import json; print(json.load(open("docs/app-store-release.json"))["version"])')"
+          branch="automation/app-store-${public_version}"
+          if [ "$(gh pr list --head "$branch" --state open --json number --jq 'length')" -gt 0 ]; then
+            echo "A version-sync pull request is already open for ${public_version}."
+            exit 0
+          fi
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+            gh pr create \
+              --base main \
+              --head "$branch" \
+              --title "docs: sync HostBox App Store ${public_version}" \
+              --body "Automated read from Apple's public lookup API. No App Review state is predicted."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add docs/app-store-release.json
+          git commit -m "docs: sync public App Store version"
+          git push --set-upstream origin "$branch"
+          gh pr create \
+            --base main \
+            --head "$branch" \
+            --title "docs: sync HostBox App Store ${public_version}" \
+            --body "Automated read from Apple's public lookup API. No App Review state is predicted."
