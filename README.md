@@ -26,8 +26,8 @@ infrastructure, and release automation remain private. See
 ## How it works
 
 1. Add a VPS and authenticate over SSH with a password or private key.
-2. Run the guided My T Server deployment and choose temporary-IP or Cloudflare
-   Tunnel access.
+2. Run the guided My T Server deployment and choose local-only, temporary-IP,
+   existing HTTPS domain, Cloudflare Tunnel, or Cloudflare DNS access.
 3. HostBox verifies the selected components and unified entry point.
 4. Transfer the non-secret handoff to My T, then explicitly import the
    credential package on the same device.

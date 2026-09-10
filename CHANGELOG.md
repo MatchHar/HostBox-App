@@ -6,6 +6,15 @@ The public App Store version is synchronized from Apple in
 [`docs/app-store-release.json`](docs/app-store-release.json). This history
 records documentation milestones and does not predict App Review.
 
+## 2026-09-10 — Public 1.24 documentation sync
+
+- Synchronized Apple's public HostBox version record to 1.24.
+- Aligned the three-language setup guide with the five public connection modes:
+  local only, temporary public IP, existing HTTPS domain, Cloudflare Tunnel,
+  and Cloudflare DNS to VPS.
+- Kept unreleased product modules, private source, deployment implementation,
+  credentials, and production infrastructure outside this repository.
+
 ## 2026-08-30 — Initial documentation boundary
 
 - Created the official HostBox product/support documentation repository.
