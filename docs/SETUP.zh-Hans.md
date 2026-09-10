@@ -22,11 +22,18 @@ HostBox 建议至少 2 GB 内存和 20 GB 可用空间。1 GB 可能缓慢或 OO
 
 ## 3. 选择接入方式
 
-- **Cloudflare Tunnel：**适合已经控制域名和 Cloudflare 账号的用户。部署 Token
-  只用于当前操作。
-- **私有 VPN：**适合 iPhone 和 VPS 在同一私有 VPN 的情况。
-- **临时公开 IP：**用于初始引导设置。只能公开经过身份验证的 My T API 入口；
-  TeslaMate 网页和 Grafana 保持在 VPS 回环地址，并使用 HostBox 显示的电脑 SSH 隧道说明。
+- **仅本机：**API、TeslaMate 网页和 Grafana 只绑定 VPS 回环地址。请使用
+  HostBox 显示的电脑 SSH 隧道，或使用可路由至该服务器的私有 VPN。
+- **临时公网 IP：**用于初始引导设置。只公开经过身份验证的 My T API 入口；
+  TeslaMate 网页和 Grafana 保持在 VPS 回环地址。
+- **已有 HTTPS 域名：**可保留已正常运行的 Nginx／Caddy，或在用户明确选择后
+  由 HostBox 配置受管 HTTPS 网关。
+- **Cloudflare Tunnel：**适合已经控制域名和 Cloudflare 账号的用户。
+  Cloudflare API Token 只用于当前操作。
+- **Cloudflare DNS 指向 VPS：**把选定的 Cloudflare DNS 主机名指向 VPS，
+  并在不创建 Tunnel 的情况下验证 HTTPS 入口。
+
+私有 VPN 是网络传输方式，不是独立的公网入口；通常与“仅本机”模式配合使用。
 
 不要把 TeslaMate 网页、Grafana、数据库、MQTT 或 Companion 地址填成 My T 的 `base_url`。
 

@@ -24,7 +24,8 @@ SSH／部署实现、生成的 Compose 配置、签名材料、生产基础设�
 ## 工作流程
 
 1. 添加 VPS，并使用密码或私钥通过 SSH 验证身份。
-2. 运行 My T Server 引导部署，选择临时 IP 或 Cloudflare Tunnel。
+2. 运行 My T Server 引导部署，选择仅本机、临时公网 IP、已有 HTTPS 域名、
+   Cloudflare Tunnel 或 Cloudflare DNS。
 3. HostBox 验证所选组件和统一入口。
 4. 把不含秘密的交接信息送到 My T，再在同一设备上明确导入凭据包。
 

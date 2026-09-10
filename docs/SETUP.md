@@ -27,13 +27,22 @@ storage, Docker, and Compose status.
 
 ## 3. Choose the access mode
 
-- **Cloudflare Tunnel:** recommended when the user already controls the domain
-  and Cloudflare account. The deployment token is used only during the active
-  operation.
-- **Private VPN:** suitable when both the iPhone and VPS share a private VPN.
+- **Local only:** keeps the API, TeslaMate web, and Grafana on VPS loopback.
+  Reach them through the computer SSH-tunnel instructions shown by HostBox, or
+  through a private VPN that can route to the server.
 - **Temporary public IP:** intended for initial guided setup. Only the
-  authenticated My T API entry should be public; TeslaMate web and Grafana stay
-  on VPS loopback and use the computer SSH-tunnel instructions shown by HostBox.
+  authenticated My T API entry is published; TeslaMate web and Grafana stay on
+  VPS loopback.
+- **Existing HTTPS domain:** keeps a working Nginx/Caddy setup or, when the user
+  explicitly chooses it, lets HostBox prepare the managed HTTPS gateway.
+- **Cloudflare Tunnel:** recommended when the user already controls the domain
+  and Cloudflare account. The Cloudflare API token is used only during the
+  active operation.
+- **Cloudflare DNS to VPS:** points a selected Cloudflare DNS name at the VPS
+  and verifies the HTTPS entry without creating a Tunnel.
+
+A private VPN is a transport option, not a separate public endpoint. It is most
+often paired with local-only mode.
 
 Do not enter the TeslaMate web, Grafana, database, MQTT, or Companion address as
 the My T `base_url`.

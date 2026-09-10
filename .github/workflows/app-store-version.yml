@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
   pull-requests: write
 
@@ -30,8 +31,18 @@ jobs:
           fi
           public_version="$(python3 -c 'import json; print(json.load(open("docs/app-store-release.json"))["version"])')"
           branch="automation/app-store-${public_version}"
+          while IFS=$'\t' read -r stale_number stale_branch; do
+            if [ -n "$stale_number" ] && [ "$stale_branch" != "$branch" ]; then
+              gh pr close "$stale_number" \
+                --comment "Superseded by Apple's public HostBox ${public_version} listing."
+            fi
+          done < <(gh pr list --state open --limit 100 \
+            --json number,headRefName \
+            --jq '.[] | select(.headRefName | startswith("automation/app-store-")) | [.number, .headRefName] | @tsv')
           if [ "$(gh pr list --head "$branch" --state open --json number --jq 'length')" -gt 0 ]; then
             echo "A version-sync pull request is already open for ${public_version}."
+            gh workflow run docs.yml --ref "$branch"
+            gh workflow run stable-catalog.yml --ref "$branch"
             exit 0
           fi
           if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
@@ -40,6 +51,8 @@ jobs:
               --head "$branch" \
               --title "docs: sync HostBox App Store ${public_version}" \
               --body "Automated read from Apple's public lookup API. No App Review state is predicted."
+            gh workflow run docs.yml --ref "$branch"
+            gh workflow run stable-catalog.yml --ref "$branch"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -53,3 +66,5 @@ jobs:
             --head "$branch" \
             --title "docs: sync HostBox App Store ${public_version}" \
             --body "Automated read from Apple's public lookup API. No App Review state is predicted."
+          gh workflow run docs.yml --ref "$branch"
+          gh workflow run stable-catalog.yml --ref "$branch"

@@ -5,6 +5,13 @@
 App Store 公開版本由 Apple 自動同步到
 [`docs/app-store-release.json`](docs/app-store-release.json)。本記錄只描述文件里程碑，不預測 App 審核。
 
+## 2026-09-10 — 公開版 1.24 文件同步
+
+- 把 Apple 公開的 HostBox 版本記錄同步為 1.24。
+- 三語言設定指南對齊已上線的五種連線方式：僅本機、臨時公網 IP、已有 HTTPS
+  網域、Cloudflare Tunnel 和 Cloudflare DNS 指向 VPS。
+- 未上線模組、私人原始碼、部署實作、憑證和生產基礎設施繼續保持在本儲存庫之外。
+
 ## 2026-08-30 — 初始公開邊界
 
 - 建立 HostBox 官方產品／支援文件儲存庫。
