@@ -47,6 +47,25 @@ often paired with local-only mode.
 Do not enter the TeslaMate web, Grafana, database, MQTT, or Companion address as
 the My T `base_url`.
 
+### Cloudflare Tunnel and Friend Together
+
+First verify the Cloudflare API Token, select the zone, and enter the owner
+hostname, for example `teslamate.example.com`. The email gate is optional and
+configured afterward; a missing One-time PIN setup is explained separately
+from Token validity.
+
+When My T extras and Tunnel are selected, HostBox derives
+`friend.teslamate.example.com` on the same Tunnel and shows the share address
+before deployment and on completion. This separate HTTPS address serves
+Friend Together sharing; it is not a second My T `base_url` and does not grant
+friends access to the owner's TeslaMate website. It uses the existing domain.
+
+Both owners need a compatible Companion with Friend Together enabled, reachable
+HTTPS share addresses, and explicit temporary sharing consent in My T. Choosing
+precise-location sharing is required for the map; optional navigation, battery,
+and route-trace sharing can be selected separately. Installing HostBox alone,
+or ordinary notification pairing, does not enable friend sharing.
+
 ## 4. Deploy and verify
 
 Select the standard My T Server components. HostBox uses the verified stable

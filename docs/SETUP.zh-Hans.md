@@ -37,6 +37,21 @@ HostBox 建议至少 2 GB 内存和 20 GB 可用空间。1 GB 可能缓慢或 OO
 
 不要把 TeslaMate 网页、Grafana、数据库、MQTT 或 Companion 地址填成 My T 的 `base_url`。
 
+### Cloudflare Tunnel 与朋友同行
+
+先验证 Cloudflare API Token、选择 Zone，再填写车主主机名，例如
+`teslamate.example.com`。Email 门禁是后续可选设置；尚未设置 One-time PIN
+会单独说明，不会被当作 Token 无效。
+
+选择 My T 增强与 Tunnel 后，HostBox 在同一条 Tunnel 自动生成
+`friend.teslamate.example.com`，并在部署前及完成页显示分享地址。此独立 HTTPS
+地址只用于朋友同行分享，不是第二个 My T `base_url`，也不会让朋友取得车主
+TeslaMate 网页的访问权；它沿用已有域名。
+
+双方都需要已启用朋友同行的兼容 Companion、可连接的 HTTPS 分享地址，及 My T
+内明确的临时分享授权。地图需要精确位置分享；导航、电池与轨迹可分别选择。
+只安装 HostBox 或完成普通通知配对，不会启用朋友分享。
+
 ## 4. 部署和验证
 
 选择标准 My T Server 组件。HostBox 使用已验证稳定目录，检查接入策略并执行

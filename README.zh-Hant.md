@@ -5,7 +5,8 @@
 [![HostBox App Store 版本](https://img.shields.io/itunes/v/6798103086?label=App%20Store&color=0a84ff)](https://apps.apple.com/app/id6798103086)
 [![文件安全檢查](https://github.com/MatchHar/HostBox-App/actions/workflows/docs.yml/badge.svg)](https://github.com/MatchHar/HostBox-App/actions/workflows/docs.yml)
 
-HostBox 是在 iPhone 上部署和維護自託管 My T Server 的工具。它直接連接
+HostBox 是 iPhone 上的 VPS 工作區與自託管 My T Server 部署工具，整合伺服器
+狀態、SSH、Docker 和維護。它直接連接
 使用者選擇的 VPS，引導安裝 TeslaMate、TeslaMateAPI 和選用的 My T
 Companion，驗證服務健康狀態，再把一個已測試的連線入口交給 My T。
 
@@ -13,6 +14,16 @@ Companion，驗證服務健康狀態，再把一個已測試的連線入口交�
 [官方介紹與影片](https://my-tesla.app/hostbox/zh-hant/) ·
 [隱私權政策](https://my-tesla.app/hostbox/privacy/zh-hant/) ·
 [支援](https://my-tesla.app/support/zh-hant/)
+
+## 2026-09-11 發佈 — HostBox 2.01
+
+- 繼續設定、更新或安全移除既有 My T Server，並檢查操作對共用 VPS 的影響範圍。
+- 先驗證 Cloudflare API Token，再設定主機名稱；Email 門禁改為選用。
+- 選擇 My T 增強與 Tunnel 後，在車主主機名稱前加上 `friend.`，建立獨立的朋友同行分享位址。朋友只取得 My T 中明確授予的臨時分享權限，不會因此取得車主 TeslaMate 網頁的存取權。
+- TeslaMate 電池與充電連結使用公開 Grafana 位址。
+- iCloud 備份非敏感伺服器與部署資料；密碼、私鑰與 Token 留在裝置上。
+
+朋友同行需要雙方具備相容的 Companion 服務及可連線的 HTTPS 分享位址。請見[設定與分享要求](docs/SETUP.zh-Hant.md)和[具日期的發佈記錄](CHANGELOG.zh-Hant.md)。
 
 ## 儲存庫邊界
 
@@ -75,5 +86,9 @@ App Store 徽章和 `docs/app-store-release.json` 從 Apple 取得公開版本�
 
 ## 截圖與影片
 
-本地化發佈影片和最新產品介紹維護在[HostBox 官方頁面](https://my-tesla.app/hostbox/zh-hant/)。
+觀看 [HostBox 2.01 繁體中文宣傳影片](https://www.my-tesla.app/zh-hant/#hostbox-video)。
+
+[![觀看 HostBox 2.01 繁體中文宣傳影片](https://www.my-tesla.app/assets/promo/hostbox-2.01-zh-hant.jpg)](https://www.my-tesla.app/zh-hant/#hostbox-video)
+
+本地化影片和最新產品介紹由官網統一維護。
 App Store 截圖由 Apple 的正式分發頁面維護，避免文件儲存庫出現過期的第二套圖庫。
