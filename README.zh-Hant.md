@@ -5,7 +5,7 @@
 [![HostBox App Store 版本](https://img.shields.io/itunes/v/6798103086?label=App%20Store&color=0a84ff)](https://apps.apple.com/app/id6798103086)
 [![文件安全檢查](https://github.com/MatchHar/HostBox-App/actions/workflows/docs.yml/badge.svg)](https://github.com/MatchHar/HostBox-App/actions/workflows/docs.yml)
 
-HostBox 是 iPhone 上的 VPS 工作區與自託管 My T Server 部署工具，整合伺服器
+HostBox 是 iPhone 和 iPad 上的 VPS 工作區與自託管 My T Server 部署工具，整合伺服器
 狀態、SSH、Docker 和維護。它直接連接
 使用者選擇的 VPS，引導安裝 TeslaMate、TeslaMateAPI 和選用的 My T
 Companion，驗證服務健康狀態，再把一個已測試的連線入口交給 My T。
@@ -86,9 +86,9 @@ App Store 徽章和 `docs/app-store-release.json` 從 Apple 取得公開版本�
 
 ## 截圖與影片
 
-觀看 [HostBox 2.01 繁體中文宣傳影片](https://www.my-tesla.app/zh-hant/#hostbox-video)。
+在[繁體中文官網查看 HostBox](https://www.my-tesla.app/zh-hant/#hostbox-video)。
 
-[![觀看 HostBox 2.01 繁體中文宣傳影片](https://www.my-tesla.app/assets/promo/hostbox-2.01-zh-hant.jpg)](https://www.my-tesla.app/zh-hant/#hostbox-video)
+<a href="https://www.my-tesla.app/zh-hant/#hostbox-video"><img src="https://www.my-tesla.app/assets/promo/hostbox-2.01-zh-hant.jpg" alt="在繁體中文官網查看 HostBox" width="220"></a>
 
 本地化影片和最新產品介紹由官網統一維護。
 App Store 截圖由 Apple 的正式分發頁面維護，避免文件儲存庫出現過期的第二套圖庫。

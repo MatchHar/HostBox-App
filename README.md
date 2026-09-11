@@ -5,8 +5,9 @@
 [![HostBox on the App Store](https://img.shields.io/itunes/v/6798103086?label=App%20Store&color=0a84ff)](https://apps.apple.com/app/id6798103086)
 [![Documentation safety](https://github.com/MatchHar/HostBox-App/actions/workflows/docs.yml/badge.svg)](https://github.com/MatchHar/HostBox-App/actions/workflows/docs.yml)
 
-HostBox is an iPhone VPS workspace and deployment tool for a self-hosted My T
-Server, with server status, SSH, Docker, and maintenance in one place. It connects directly to a VPS selected by the user, guides installation
+HostBox is a VPS workspace and deployment tool for a self-hosted My T Server
+on iPhone and iPad, with server status, SSH, Docker, and maintenance in one place.
+It connects directly to a VPS selected by the user, guides installation
 of TeslaMate, TeslaMateAPI, and optional My T Companion, verifies service
 health, and hands one tested connection entry to My T.
 
@@ -93,9 +94,9 @@ is not deployed until the complete path and rollback have been validated.
 
 ## Screenshots and video
 
-Watch the [HostBox 2.01 English promo](https://www.my-tesla.app/en/#hostbox-video).
+View [HostBox on the official English website](https://www.my-tesla.app/en/#hostbox-video).
 
-[![Watch the HostBox 2.01 English promo](https://www.my-tesla.app/assets/promo/hostbox-2.01-en.jpg)](https://www.my-tesla.app/en/#hostbox-video)
+<a href="https://www.my-tesla.app/en/#hostbox-video"><img src="https://www.my-tesla.app/assets/promo/hostbox-2.01-en.jpg" alt="View HostBox on the official English website" width="220"></a>
 
 The localized video and current product presentation are maintained on
 the official website. App Store
