@@ -5,6 +5,13 @@
 App Store 公开版本由 Apple 自动同步到
 [`docs/app-store-release.json`](docs/app-store-release.json)。本记录只描述文档里程碑，不预测 App 审核。
 
+## 2026-09-11 — HostBox 2.01 正式发布
+
+- 通过 Apple 公开 Lookup 确认版本 2.01；Apple 返回发布时间 `2026-09-11T16:29:50Z`。
+- 三语介绍加入已发布的 VPS 工作区、可继续的项目管理、Token 先行且 Email 门禁可选的 Tunnel 设置，以及独立朋友同行分享地址。
+- 说明公开 Grafana 链接、项目范围检查、iCloud 非敏感备份及双方的 Companion／HTTPS／授权要求。
+- 当前版本继续由 App Store 徽章及 Apple 同步 JSON 提供；此条目是有日期的发布里程碑。
+
 ## 2026-09-10 — 公开版 1.24 文档同步
 
 - 把 Apple 公开的 HostBox 版本记录同步为 1.24。

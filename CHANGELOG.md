@@ -6,6 +6,13 @@ The public App Store version is synchronized from Apple in
 [`docs/app-store-release.json`](docs/app-store-release.json). This history
 records documentation milestones and does not predict App Review.
 
+## 2026-09-11 — HostBox 2.01 public release
+
+- Verified version 2.01 through Apple's public Lookup; Apple reports the release time as `2026-09-11T16:29:50Z`.
+- Added the released VPS workspace, resumable project management, Token-first Tunnel setup with an optional email gate, and the separate Friend Together share address to all three languages.
+- Documented public Grafana links, project impact checks, non-sensitive iCloud backup, and both owners' Companion/HTTPS/consent requirements.
+- Kept the App Store badge and Apple-synchronized JSON as the current-version sources; this entry is a dated release milestone.
+
 ## 2026-09-10 — Public 1.24 documentation sync
 
 - Synchronized Apple's public HostBox version record to 1.24.
