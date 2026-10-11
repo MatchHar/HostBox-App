@@ -5,6 +5,13 @@
 App Store 公开版本由 Apple 自动同步到
 [`docs/app-store-release.json`](docs/app-store-release.json)。本记录只描述文档里程碑，不预测 App 审核。
 
+## 2026-09-20 — HostBox 3.01 正式发布
+
+- 通过 Apple 公开 Lookup 确认版本 3.01 和发布时间。
+- 优化 My T Server 部署、连接设置与更新流程；支持新版 My T Companion 服务及其扩展能力。
+- 加强更新校验，同时保留既有配置。
+- 同步更新英文、简体中文、繁体中文产品介绍和宣传图片。
+
 ## 2026-09-11 — HostBox 2.01 正式发布
 
 - 通过 Apple 公开 Lookup 确认版本 2.01；Apple 返回发布时间 `2026-09-11T16:29:50Z`。

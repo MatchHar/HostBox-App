@@ -6,6 +6,13 @@ The public App Store version is synchronized from Apple in
 [`docs/app-store-release.json`](docs/app-store-release.json). This history
 records documentation milestones and does not predict App Review.
 
+## 2026-09-20 — HostBox 3.01 public release
+
+- Verified version 3.01 and release date through Apple's public Lookup.
+- Refined My T Server deployment, connection setup, and updates; added support for the latest My T Companion service and its expanded capabilities.
+- Strengthened update verification while preserving existing configuration.
+- Updated the English, Simplified Chinese, and Traditional Chinese product pages and promo images.
+
 ## 2026-09-11 — HostBox 2.01 public release
 
 - Verified version 2.01 through Apple's public Lookup; Apple reports the release time as `2026-09-11T16:29:50Z`.
