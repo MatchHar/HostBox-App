@@ -16,13 +16,11 @@ health, and hands one tested connection entry to My T.
 [Privacy policy](https://my-tesla.app/hostbox/privacy/en/) ·
 [Support](https://my-tesla.app/support/en/)
 
-## Released on 2026-09-11 — HostBox 2.01
+## Released on 2026-09-20 — HostBox 3.01
 
-- Resume, update, or safely remove an existing My T Server, with project impact checks for a shared VPS.
-- Verify the Cloudflare API Token before hostname setup; the email gate is optional.
-- With My T extras and Tunnel selected, add a separate Friend Together share address by prefixing the owner hostname with `friend.`. Friends receive only the temporary sharing permissions granted in My T, without access to the owner's TeslaMate website.
-- Open TeslaMate battery and charge links through the public Grafana address.
-- Back up non-sensitive server and deployment metadata to iCloud; passwords, private keys, and tokens stay on the device.
+- Refines My T Server deployment, connection setup, and updates.
+- Supports the latest My T Companion service and its expanded capabilities.
+- Strengthens update verification while preserving existing configuration.
 
 Both owners need compatible Companion services and reachable HTTPS share addresses for Friend Together. See [setup and sharing requirements](docs/SETUP.md) and the [dated release history](CHANGELOG.md).
 
@@ -96,7 +94,7 @@ is not deployed until the complete path and rollback have been validated.
 
 View [HostBox on the official English website](https://www.my-tesla.app/en/#hostbox-video).
 
-<a href="https://www.my-tesla.app/en/#hostbox-video"><img src="https://www.my-tesla.app/assets/promo/hostbox-2.01-en.jpg" alt="View HostBox on the official English website" width="220"></a>
+<a href="https://www.my-tesla.app/en/#hostbox-video"><img src="https://www.my-tesla.app/assets/promo/hostbox-3.01-en.jpg" alt="View HostBox on the official English website" width="220"></a>
 
 The localized video and current product presentation are maintained on
 the official website. App Store
